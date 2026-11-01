@@ -3,53 +3,75 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HomeFix Leeds | Trusted Handyman & Home Repair Services in Leeds</title>
-<script src="https://cdn.tailwindcss.com"></script>
+<title>HomeFix Leeds | Reliable Home Repair & Handyman in Leeds LS1-LS28</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,-apple-system,Segoe UI,Roboto}
+body{background:#f8fafc;color:#0f172a;line-height:1.6}
+.header{display:flex;justify-content:space-between;align-items:center;padding:16px 24px;background:white;box-shadow:0 1px 3px rgba(0,0,0,.1);position:sticky;top:0;z-index:10}
+.logo{font-weight:800;font-size:20px;color:#2563eb}
+.logo span{color:#0f172a}
+.call-btn{background:#2563eb;color:white;padding:10px 18px;border-radius:999px;text-decoration:none;font-weight:600}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:60px 24px;max-width:1100px;margin:0 auto;align-items:center}
+.hero h1{font-size:42px;line-height:1.1;font-weight:800;margin-bottom:16px}
+.hero p{color:#475569;margin-bottom:20px;font-size:17px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;display:inline-block}
+.btn-primary{background:#2563eb;color:white}
+.btn-secondary{background:white;border:2px solid #0f172a;color:#0f172a}
+.blue-card{background:#2563eb;color:white;padding:50px 30px;border-radius:20px;text-align:center;box-shadow:0 10px 30px rgba(37,99,235,.3)}
+.section{max-width:1100px;margin:0 auto;padding:50px 24px}
+.section h2{text-align:center;font-size:28px;margin-bottom:30px}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.card{background:white;padding:20px;border-radius:16px;border:1px solid #e2e8f0}
+.card span{font-size:28px}
+.card h3{margin:10px 0 4px;font-size:16px}
+.card p{color:#64748b;font-size:13px}
+.blue{background:#2563eb;color:white}
+.contact{background:#0f172a;color:white;padding:50px 24px;text-align:center;margin-top:40px}
+.contact a{color:white}
+@media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:32px}.grid{grid-template-columns:1fr 1fr}}
+</style>
 </head>
-<body class="bg-white text-gray-800">
-<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-  <div class="font-extrabold text-2xl">HomeFix<span class="text-blue-600"> Leeds</span></div>
-  <a href="tel:01130000000" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold">Call Now</a>
-</nav>
-<section class="bg-gray-50">
-<div class="max-w-7xl mx-auto px-6 py-16 grid md:grid-cols-2 gap-10 items-center">
-  <div>
-    <h1 class="text-4xl md:text-5xl font-extrabold">Reliable Home Repair & Handyman Services in Leeds</h1>
-    <p class="mt-4 text-lg text-gray-600">Same-day service for plumbing, electrics, painting, furniture assembly & more. Trusted by 500+ homes in Leeds.</p>
-    <div class="mt-6 flex gap-4">
-      <a href="#contact" class="bg-blue-600 text-white px-7 py-3 rounded-full font-bold">Get Free Quote</a>
-      <a href="#services" class="border-2 border-gray-900 px-7 py-3 rounded-full font-bold">Our Services</a>
-    </div>
-  </div>
-  <div class="bg-white rounded-3xl p-2 shadow-xl">
-    <div class="bg-blue-600 rounded-2xl h-80 flex items-center justify-center text-white text-center p-8">
-      <div><div class="text-6xl mb-4">🛠️</div><p class="text-xl font-bold">Emergency Callouts<br>Leeds LS1 - LS28</p></div>
-    </div>
-  </div>
+<body>
+<div class="header">
+<div class="logo">HomeFix <span>Leeds</span></div>
+<a class="call-btn" href="tel:+447923825068">📞 07923 825068</a>
 </div>
-</section>
-<section id="services" class="max-w-7xl mx-auto px-6 py-16">
-<h2 class="text-3xl font-extrabold text-center">What We Fix</h2>
-<div class="grid md:grid-cols-3 gap-6 mt-10">
-  <div class="border rounded-2xl p-6"><div class="text-3xl">🚿</div><h3 class="font-bold mt-3">Plumbing</h3></div>
-  <div class="border rounded-2xl p-6"><div class="text-3xl">💡</div><h3 class="font-bold mt-3">Electrical</h3></div>
-  <div class="border rounded-2xl p-6"><div class="text-3xl">🎨</div><h3 class="font-bold mt-3">Painting</h3></div>
-  <div class="border rounded-2xl p-6"><div class="text-3xl">🪑</div><h3 class="font-bold mt-3">Furniture Assembly</h3></div>
-  <div class="border rounded-2xl p-6"><div class="text-3xl">🏠</div><h3 class="font-bold mt-3">General Handyman</h3></div>
-  <div class="border rounded-2xl p-6 bg-blue-600 text-white"><h3 class="font-bold">Free Quote in 30 mins</h3></div>
+
+<div class="hero">
+<div>
+<h1>Reliable Home Repair & Handyman Services in Leeds</h1>
+<p>Same-day service for plumbing, electrics, painting, furniture assembly & more. Trusted by 500+ homes in Leeds LS1 - LS28. Free quote in 30 mins.</p>
+<div class="btns">
+<a class="btn btn-primary" href="tel:+447923825068">Get Free Quote - Call Now</a>
+<a class="btn btn-secondary" href="#services">Our Services</a>
 </div>
-</section>
-<section id="contact" class="max-w-7xl mx-auto px-6 py-16">
-<h2 class="text-3xl font-extrabold text-center">Get Free Quote</h2>
-<div class="max-w-2xl mx-auto mt-8 bg-gray-50 rounded-2xl p-8">
-<form class="space-y-4">
-  <input required placeholder="Your Name" class="w-full p-3 rounded-xl border">
-  <input required placeholder="Phone" class="w-full p-3 rounded-xl border">
-  <textarea required placeholder="What do you need fixed?" class="w-full p-3 rounded-xl border h-28"></textarea>
-  <button class="w-full bg-blue-600 text-white p-3 rounded-xl font-bold">Send Request</button>
-</form>
 </div>
-</section>
-<footer class="border-t py-6 text-center text-sm text-gray-500">© 2026 HomeFix Leeds</footer>
+<div class="blue-card">
+<div style="font-size:48px">🛠️</div>
+<h3 style="margin:16px 0 6px">Emergency Callouts<br>Leeds LS1 - LS28</h3>
+<p style="opacity:.9;margin-top:10px">Call 07923 825068<br>Available 7 days a week</p>
+</div>
+</div>
+
+<div class="section" id="services">
+<h2>What We Fix</h2>
+<div class="grid">
+<div class="card"><span>🚿</span><h3>Plumbing</h3><p>Leaks, taps, toilets, unblocking drains</p></div>
+<div class="card"><span>💡</span><h3>Electrical</h3><p>Lights, sockets, switches, fault finding</p></div>
+<div class="card"><span>🎨</span><h3>Painting</h3><p>Walls, ceilings, touch-ups & decorating</p></div>
+<div class="card"><span>🪑</span><h3>Furniture Assembly</h3><p>IKEA & flat-pack assembly fast</p></div>
+<div class="card"><span>🏠</span><h3>General Handyman</h3><p>Shelves, doors, silicone, odd jobs</p></div>
+<div class="card blue"><h3>Free Quote in 30 mins</h3><p style="margin-top:8px">Call or WhatsApp us now. No call-out fee in Leeds.</p><a href="tel:+447923825068" style="display:inline-block;margin-top:12px;background:white;color:#2563eb;padding:8px 16px;border-radius:999px;text-decoration:none;font-weight:700">Call Now</a></div>
+</div>
+</div>
+
+<div class="contact">
+<h2>HomeFix Leeds - Here to Help</h2>
+<p style="margin:12px 0">📍 Serving all Leeds LS1 to LS28 | ⏰ 7 Days a Week</p>
+<p style="font-size:22px;font-weight:800;margin:14px 0">📞 <a href="tel:+447923825068">07923 825068</a></p>
+<p><a href="https://wa.me/447923825068" style="background:#25D366;padding:12px 22px;border-radius:999px;text-decoration:none;display:inline-block;margin-top:10px;font-weight:700">💬 Chat on WhatsApp</a></p>
+<p style="margin-top:20px;opacity:.6;font-size:12px">© 2026 HomeFix Leeds - homefix-leeds.vercel.app</p>
+</div>
 </body>
 </html>
