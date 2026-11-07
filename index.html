@@ -5,30 +5,59 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body{font-family:Arial,sans-serif;margin:0}
-header{background:#2B0A3A;color:white;padding:20px;display:flex;justify-content:space-between}
-header a{color:white;font-weight:bold;text-decoration:none}
-.hero{background:#2B0A3A;color:white;padding:40px 20px;text-align:center}
-.hero h2{font-size:36px}
-.search{max-width:400px;margin:15px auto;background:white;padding:5px;border-radius:8px;display:flex}
-.search input{flex:1;padding:12px;border:none;outline:none}
-.search button{background:#5B2A86;color:white;border:none;padding:0 20px;border-radius:6px;font-size:20px}
-.stats{padding:30px 20px;text-align:center}
-.stats div{display:inline-block;margin:0 20px}
-.cta{background:#2B0A3A;color:white;padding:30px;text-align:center}
+.topbar{background:#f2f2f2;text-align:center;padding:8px;font-size:13px}
+.topbar a{font-weight:bold;color:#000}
+header{background:#0A2540;color:white;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;max-width:1100px;margin:auto}
+header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin-left:15px}
+.signup{border:1px solid white;padding:8px 12px;border-radius:6px}
+.hero{background:#0A2540;color:white;padding:40px 20px}
+.hero-inner{max-width:1100px;margin:auto;display:flex;gap:40px;align-items:center;flex-wrap:wrap}
+.hero-left{flex:1;min-width:280px}
+.hero-left h2{font-size:48px;line-height:1.1;margin:0}
+.hero-left h3{font-size:26px;margin-top:50px}
+.search{max-width:400px;background:white;padding:5px;border-radius:6px;display:flex;margin-top:15px}
+.search input{flex:1;padding:13px;border:none;outline:none;font-size:15px}
+.search button{background:#FF6B00;color:white;border:none;padding:0 20px;border-radius:5px;font-size:20px;cursor:pointer}
+.hero-right{flex:1;min-width:280px;position:relative}
+.hero-right img{width:100%;height:420px;object-fit:cover;border-radius:8px}
+.frame{position:absolute;inset:25px 25px 25px 55px;border:3px solid #FF6B00;border-radius:10px;pointer-events:none}
+.tag{position:absolute;top:12px;left:55px;background:#FF6B00;color:white;font-size:12px;font-weight:bold;padding:4px 8px;border-radius:4px}
+.trust{max-width:1100px;margin:auto;padding:30px 20px}
+.stats{display:flex;gap:40px;flex-wrap:wrap;margin-top:25px}
+.stat{border-left:4px solid #FF6B00;padding-left:15px}
+.stat b{font-size:28px}
+.stat div{font-weight:bold;font-size:18px}
+.cta{background:#0A2540;color:white;padding:30px;text-align:center}
 .btn1{background:white;color:black;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block}
 .btn2{background:#25D366;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-left:10px}
+@media(max-width:700px){.hero-left h2{font-size:34px}.hero-right img{height:300px}}
 </style>
 </head>
 <body>
-<header><b>🔧 HomeFix UK</b><a href="tel:07923825068">07923 825068</a></header>
-<div class="hero">
-<h2>The reliable way<br>to fix your home</h2>
+<div class="topbar">Are you a tradesperson looking for leads? <a href="https://wa.me/447923825068">Join for free</a></div>
+<header><b style="font-size:22px">🔧 HomeFix <span style="color:#FF6B00">UK</span></b><div><a href="https://wa.me/447923825068">Post a job</a><a href="tel:07923825068">07923 825068</a><a class="signup" href="https://wa.me/447923825068">Sign up as a tradesperson</a></div></header>
+<div class="hero"><div class="hero-inner">
+<div class="hero-left">
+<h2>The reliable way<br>to fix your<br>home</h2>
 <h3>What is your job?</h3>
 <div class="search"><input id="job" placeholder="For example: painting"><button onclick="go()">→</button></div>
-<p>Type your job → it opens WhatsApp to us instantly</p>
+<p style="font-size:13px;color:#ccc">Type your job → it opens WhatsApp to us instantly</p>
 </div>
-<div class="stats"><p>⭐⭐⭐⭐⭐ Excellent on Trustpilot</p><div><b>5,000+</b><br>jobs done</div><div><b>40+</b><br>categories</div><div><b>2,500+</b><br>reviews</div></div>
-<div class="cta"><h3>Need a fix today?</h3><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp</a><p style="font-size:12px;color:#aaa;margin-top:20px">© 2026 HomeFix UK | Leeds</p></div>
+<div class="hero-right">
+<img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80">
+<div class="frame"></div>
+<div class="tag">Lee ★ 5/5</div>
+</div>
+</div></div>
+<div class="trust">
+<p><u><b>Excellent</b></u> ⭐⭐⭐⭐⭐ <b style="color:#00b67a">★ Trustpilot</b></p>
+<div class="stats">
+<div class="stat"><b>5,000+</b><div>jobs done</div></div>
+<div class="stat"><b>40+</b><div>trade categories</div></div>
+<div class="stat"><b>2,500+</b><div>reviews</div></div>
+</div>
+</div>
+<div class="cta"><h3>Need a fix today?</h3><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp</a><p style="font-size:12px;color:#aaa;margin-top:20px">© 2026 HomeFix UK | Leeds LS1-LS28</p></div>
 <script>
 function go(){var j=document.getElementById('job').value;var msg=j?"Hi HomeFix UK, I need help with: "+j:"Hi HomeFix UK, I need a handyman";window.open("https://wa.me/447923825068?text="+encodeURIComponent(msg),"_blank");}
 </script>
