@@ -1,110 +1,46 @@
 "use client";
 import { useState } from "react";
-
 export default function Home() {
   const [job, setJob] = useState("");
   const phone = "07923825068";
   const phoneDisplay = "07923 825068";
-
   const handleSearch = () => {
-    const msg = job ? `Hi HomeFix UK, I need help with: ${job}` : `Hi HomeFix UK, I need a handyman`;
-    window.open(`https://wa.me/447923825068?text=${encodeURIComponent(msg)}`, "_blank");
+    const msg = job ? Hi HomeFix UK, I need help with: ${job} : Hi HomeFix UK, I need a handyman;
+    window.open(https://wa.me/447923825068?text=${encodeURIComponent(msg)}, "_blank");
   };
-
-  const categories = [
-    { title: "Plumbing", icon: "🚿", desc: "Leaks, taps, toilets" },
-    { title: "Electrical", icon: "💡", desc: "Sockets, lights" },
-    { title: "Carpentry", icon: "🔨", desc: "Doors, shelves" },
-    { title: "Painting", icon: "🎨", desc: "Walls, ceilings" },
-    { title: "Handyman", icon: "🏠", desc: "All small jobs" },
-    { title: "Flat-Pack", icon: "📦", desc: "Furniture assembly" },
-  ];
-
   return (
-    <main className="min-h-screen bg-white text-gray-900">
-      {/* Top Bar */}
-      <div className="bg-gray-100 text-center text-xs py-2">
-        Are you a tradesperson looking for work? <span className="underline font-bold">Join HomeFix UK</span>
-      </div>
-
-      {/* Header */}
-      <header className="bg-[#2B0A3A] text-white flex justify-between items-center px-6 md:px-20 py-4">
-        <h1 className="text-2xl font-black">🔧 HomeFix <span className="text-[#7CFC00]">UK</span></h1>
-        <div className="flex gap-4 items-center text-sm font-bold">
-          <a href={`tel:${phone}`} className="hidden md:block">Post a job</a>
-          <a href={`tel:${phone}`}>{phoneDisplay}</a>
-          <a href={`https://wa.me/447923825068`} target="_blank" className="border border-white px-3 py-2 rounded-md">Sign up as tradesperson</a>
-        </div>
+    <main style={{fontFamily:"sans-serif"}}>
+      <header style={{background:"#2B0A3A",color:"white",padding:"20px",display:"flex",justifyContent:"space-between"}}>
+        <h1>🔧 HomeFix UK</h1>
+        <a href={tel:${phone}} style={{color:"white",fontWeight:"bold"}}>{phoneDisplay}</a>
       </header>
-
-      {/* Hero - MyBuilder Style */}
-      <section className="bg-[#2B0A3A] text-white px-6 md:px-20 py-14 md:py-20 grid md:grid-cols-2 gap-10 items-center">
-        <div>
-          <h2 className="text-4xl md:text-6xl font-black leading-[1.1] mb-8">
-            The reliable way<br/>to fix your<br/>home
-          </h2>
-          <h3 className="text-2xl font-bold mb-4">What is your job?</h3>
-          <div className="flex bg-white rounded-md p-1 max-w-md">
-            <input
-              value={job}
-              onChange={(e) => setJob(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              placeholder="For example: painting"
-              className="flex-1 px-4 py-3 text-black outline-none rounded-md"
-            />
-            <button onClick={handleSearch} className="bg-[#5B2A86] text-white px-5 rounded-md text-xl">→</button>
-          </div>
-          <p className="text-sm text-gray-300 mt-3">Type your job → it opens WhatsApp to us instantly</p>
+      <section style={{background:"#2B0A3A",color:"white",padding:"40px 20px",textAlign:"center"}}>
+        <h2 style={{fontSize:"36px",fontWeight:"900"}}>The reliable way
+to fix your home</h2>
+        <h3 style={{marginTop:"20px"}}>What is your job?</h3>
+        <div style={{display:"flex",maxWidth:"400px",margin:"10px auto",background:"white",padding:"5px",borderRadius:"8px"}}>
+          <input value={job} onChange={(e)=>setJob(e.target.value)} placeholder="For example: painting" style={{flex:1,padding:"10px",border:"none",outline:"none"}} />
+          <button onClick={handleSearch} style={{background:"#5B2A86",color:"white",padding:"0 20px",border:"none",borderRadius:"6px",fontSize:"20px"}}>→</button>
         </div>
-
-        <div className="relative">
-          <img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=800&q=80" alt="Tradesperson working" className="rounded-xl w-full h-[380px] object-cover" />
-          <div className="absolute top-4 left-4 bg-[#7CFC00] text-black text-xs font-bold px-2 py-1 rounded">Lee ★ 5/5</div>
-          <div className="absolute bottom-4 left-4 bg-white text-black px-3 py-2 rounded-lg text-sm font-bold shadow">✅ Same day in Leeds LS1-LS28</div>
+        <p>Type your job → it opens WhatsApp to us instantly</p>
+      </section>
+      <section style={{padding:"30px 20px",textAlign:"center"}}>
+        <p>⭐⭐⭐⭐⭐ Excellent on Trustpilot</p>
+        <div style={{display:"flex",justifyContent:"center",gap:"30px",marginTop:"20px"}}>
+          <div>5,000+
+jobs done</div>
+          <div>40+
+categories</div>
+          <div>2,500+
+reviews</div>
         </div>
       </section>
+      <section style={{background:"#2B0A3A",color:"white",padding:"30px",textAlign:"center"}}>
+        <h3>Need a fix today?</h3>
 
-      {/* Trust */}
-      <section className="px-6 md:px-20 py-8">
-        <p className="font-bold">Excellent <span className="text-white bg-green-500 px-1">★★★★★</span> <span className="text-green-600">★ Trustpilot</span></p>
-        <div className="grid grid-cols-3 gap-6 mt-8 max-w-4xl">
-          <div className="border-l-4 border-[#7CFC00] pl-4">
-            <p className="text-2xl md:text-3xl font-black">5,000+</p>
-            <p className="font-bold">jobs done</p>
-          </div>
-          <div className="border-l-4 border-[#7CFC00] pl-4">
-            <p className="text-2xl md:text-3xl font-black">40+</p>
-            <p className="font-bold">trade categories</p>
-          </div>
-          <div className="border-l-4 border-[#7CFC00] pl-4">
-            <p className="text-2xl md:text-3xl font-black">2,500+</p>
-            <p className="font-bold">happy reviews</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Categories */}
-      <section className="px-6 md:px-20 py-10 bg-gray-50">
-        <h3 className="text-3xl font-black mb-6">What do you need?</h3>
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-          {categories.map((c) => (
-            <button key={c.title} onClick={() => { setJob(c.title); window.scrollTo({top:0, behavior:"smooth"}); }} className="bg-white border rounded-xl p-5 text-left hover:shadow-lg">
-              <div className="text-3xl mb-2">{c.icon}</div>
-              <p className="font-bold">{c.title}</p>
-              <p className="text-sm text-gray-500">{c.desc}</p>
-            </button>
-          ))}
-        </div>
-      </section>
-
-      {/* CTA */}
-      <section className="bg-[#2B0A3A] text-white text-center py-12 px-6">
-        <h3 className="text-3xl font-black mb-4">Need a fix today?</h3>
-        <div className="flex gap-4 justify-center">
-          <a href={`tel:${phone}`} className="bg-white text-black px-8 py-3 rounded-full font-bold">📞 {phoneDisplay}</a>
-          <a href="https://wa.me/447923825068" target="_blank" className="bg-[#25D366] text-white px-8 py-3 rounded-full font-bold">WhatsApp</a>
-        </div>
-        <p className="text-xs text-gray-400 mt-6">© 2026 HomeFix UK | Leeds | homefixuk.co.uk</p>
+        <a href={tel:${phone}} style={{background:"white",color:"black",padding:"12px 25px",borderRadius:"30px",fontWeight:"bold",textDecoration:"none"}}>📞 {phoneDisplay}</a>
+        <a href="https://wa.me/447923825068" target="_blank" style={{background:"#25D366",color:"white",padding:"12px 25px",borderRadius:"30px",fontWeight:"bold",textDecoration:"none",marginLeft:"10px"}}>WhatsApp</a>
+        <p style={{fontSize:"12px",marginTop:"20px",color:"#aaa"}}>© 2026 HomeFix UK | Leeds</p>
       </section>
     </main>
   );
