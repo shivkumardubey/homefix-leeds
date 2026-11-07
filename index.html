@@ -27,10 +27,20 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 .stat{border-left:4px solid #FF6B00;padding-left:15px}
 .stat b{font-size:28px}
 .stat div{font-weight:bold;font-size:18px}
+.how{background:#F2F4F7;padding:50px 20px;text-align:center}
+.how h2{font-size:36px;margin:0 0 40px}
+.steps{max-width:1000px;margin:auto;display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
+.step{flex:1;min-width:220px;max-width:300px}
+.circle{width:150px;height:150px;background:#0A2540;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;font-size:65px;position:relative}
+.circle:after{content:"";position:absolute;bottom:0;left:0;right:0;height:35%;background:#FF6B00;border-radius:0 0 75px 75px;opacity:0.9}
+.circle span{position:relative;z-index:2}
+.step small{color:#FF6B00;font-weight:bold;letter-spacing:1px}
+.step h3{font-size:19px;margin:15px 0 5px;line-height:1.3}
+.step p{color:#666;font-size:14px;margin:0}
 .cta{background:#0A2540;color:white;padding:30px;text-align:center}
 .btn1{background:white;color:black;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block}
 .btn2{background:#25D366;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-left:10px}
-@media(max-width:700px){.hero-left h2{font-size:34px}.hero-right img{height:300px}}
+@media(max-width:700px){.hero-left h2{font-size:34px}.hero-right img{height:300px}.how h2{font-size:28px}}
 </style>
 </head>
 <body>
@@ -57,6 +67,17 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 <div class="stat"><b>2,500+</b><div>reviews</div></div>
 </div>
 </div>
+
+<div class="how">
+<h2>How to hire the right tradesperson</h2>
+<div class="steps">
+<div class="step"><div class="circle"><span>📱</span></div><br><small>STEP 1</small><h3>Post your job for free</h3><p>Tell us what you need in 30 seconds</p></div>
+<div class="step"><div class="circle"><span>👷</span></div><br><small>STEP 2</small><h3>Tradespeople respond</h3><p>Get quotes on WhatsApp straight away</p></div>
+<div class="step"><div class="circle"><span>✅</span></div><br><small>STEP 3</small><h3>Review profiles and choose</h3><p>Pick the best rated fixer for your job</p></div>
+</div>
+<br><a href="https://wa.me/447923825068" style="background:#FF6B00;color:white;padding:14px 30px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:20px">Post Your Job →</a>
+</div>
+
 <div class="cta"><h3>Need a fix today?</h3><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp</a><p style="font-size:12px;color:#aaa;margin-top:20px">© 2026 HomeFix UK | Leeds LS1-LS28</p></div>
 <script>
 function go(){var j=document.getElementById('job').value;var msg=j?"Hi HomeFix UK, I need help with: "+j:"Hi HomeFix UK, I need a handyman";window.open("https://wa.me/447923825068?text="+encodeURIComponent(msg),"_blank");}
