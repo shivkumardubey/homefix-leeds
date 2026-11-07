@@ -55,13 +55,12 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 .why-right{flex:1;min-width:280px;position:relative}
 .why-right img.main{width:100%;height:420px;object-fit:cover;border-radius:22px}
 .mini{position:absolute;bottom:20px;right:15px;background:#fff;padding:12px 14px;border-radius:14px;box-shadow:0 10px 25px rgba(0,0,0,.15);display:flex;gap:10px;align-items:center}
-.mini img{width:44px;height:44px;border-radius:50%;object-fit:cover}
+.avatar{width:44px;height:44px;background:#0A2540;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px}
 .mini b{display:block;font-size:14px}
 .mini small{color:#666}
 .pill{display:inline-block;padding:13px 28px;border-radius:30px;font-weight:bold;text-decoration:none}
 .pill-orange{background:#FF6B00;color:#fff}
 .pill-navy{background:#0A2540;color:#fff}
-.pill-white{background:#fff;color:#111}
 .qgrid{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:30px;text-align:left}
 .qcard{flex:1;min-width:260px;max-width:360px;background:#fff;border:1px solid #eee;border-radius:20px;padding:22px}
 .qcard small{background:#FFF3E8;color:#FF6B00;padding:5px 10px;border-radius:30px;font-weight:bold;font-size:12px}
@@ -97,8 +96,8 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 <p class="small">Free to post • No obligation • Reply on WhatsApp in minutes</p>
 </div>
 <div class="hero-right">
-<img src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=900&q=80">
-<div class="float"><span>★★★★★ 5.0</span><br><b>Lee - Your local fixer</b><br><small style="color:#666">Headingley • 120+ fixes done</small></div>
+<img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=900&q=80" alt="Tools and work in progress">
+<div class="float"><span>★★★★★ 5.0</span><br><b>Verified Local Fixer</b><br><small style="color:#666">Headingley • Example profile</small></div>
 </div>
 </div></div>
 
@@ -133,8 +132,8 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 <br><a class="pill pill-navy" href="https://wa.me/447923825068">Chat With Us</a>
 </div>
 <div class="why-right">
-<img class="main" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80">
-<div class="mini"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=100&q=80"><div><b>Aisha • Painter</b><small>★★★★★ 4.9 • Headingley</small></div></div>
+<img class="main" src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80" alt="Cleaning tools and work">
+<div class="mini"><div class="avatar">P</div><div><b>Painter • Headingley</b><small>★★★★★ 4.9 • Verified Pro</small></div></div>
 </div>
 </div></div>
 
@@ -142,9 +141,9 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 <h2>Ask a local expert</h2>
 <p class="sub">Not sure what the problem is? Ask us - a real local pro replies, not a bot.</p>
 <div class="qgrid">
-<div class="qcard"><small>PLUMBING</small><h3>Kitchen tap won't stop dripping?</h3><i>Fatima • Headingley • 07/11/2026</i><p>Is it just a washer or do I need a new tap? What does it normally cost to fix in Leeds?</p><a href="https://wa.me/447923825068">Ask us on WhatsApp →</a></div>
-<div class="qcard"><small>ELECTRICAL</small><h3>Kettle keeps tripping the fuse?</h3><i>James • Beeston • 07/11/2026</i><p>Only happens in the kitchen when the kettle is on. Is it dangerous?</p><a href="https://wa.me/447923825068">Ask us on WhatsApp →</a></div>
-<div class="qcard"><small>PAINTING</small><h3>Can I paint straight over wallpaper?</h3><i>Sophie • Roundhay • 07/11/2026</i><p>Old wallpaper in the bedroom. Strip it or paint over it?</p><a href="https://wa.me/447923825068">Ask us on WhatsApp →</a></div>
+<div class="qcard"><small>PLUMBING</small><h3>Kitchen tap won't stop dripping?</h3><i>Customer • Headingley</i><p>Is it just a washer or do I need a new tap? What does it normally cost to fix in Leeds?</p><a href="https://wa.me/447923825068">Ask us on WhatsApp →</a></div>
+<div class="qcard"><small>ELECTRICAL</small><h3>Kettle keeps tripping the fuse?</h3><i>Customer • Beeston</i><p>Only happens in the kitchen when the kettle is on. Is it dangerous?</p><a href="https://wa.me/447923825068">Ask us on WhatsApp →</a></div>
+<div class="qcard"><small>PAINTING</small><h3>Can I paint straight over wallpaper?</h3><i>Customer • Roundhay</i><p>Old wallpaper in the bedroom. Strip it or paint over it?</p><a href="https://wa.me/447923825068">Ask us on WhatsApp →</a></div>
 </div>
 <br><a class="pill pill-navy" href="https://wa.me/447923825068">Ask Your Question Free</a>
 </div></div>
@@ -153,13 +152,13 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 <h2>What we fix most</h2>
 <p class="sub">The jobs Leeds asks us for every single week.</p>
 <div class="services">
-<div class="scard"><img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80"><div class="scard-inner"><h3>Plumbing Fixes</h3><p>Leaks, dripping taps, blocked toilets, radiators that won't heat. Fixed same-day in most areas.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Plumber →</a></div>
-<div class="scard"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80"><div class="scard-inner"><h3>Bathroom Refresh</h3><p>New shower, re-grout, new toilet or full refresh. We give you one fixed price first.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Bathroom Pro →</a></div>
-<div class="scard"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80"><div class="scard-inner"><h3>Everyday Handyman</h3><p>Shelves, flat-pack, doors that stick, pictures, small jobs nobody else wants. We do them all.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Handyman →</a></div>
+<div class="scard"><img src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?w=600&q=80" alt="Plumbing work"><div class="scard-inner"><h3>Plumbing Fixes</h3><p>Leaks, dripping taps, blocked toilets, radiators that won't heat. Fixed same-day in most areas.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Plumber →</a></div>
+<div class="scard"><img src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?w=600&q=80" alt="Bathroom work"><div class="scard-inner"><h3>Bathroom Refresh</h3><p>New shower, re-grout, new toilet or full refresh. We give you one fixed price first.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Bathroom Pro →</a></div>
+<div class="scard"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Handyman tools"><div class="scard-inner"><h3>Everyday Handyman</h3><p>Shelves, flat-pack, doors that stick, pictures, small jobs nobody else wants. We do them all.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Handyman →</a></div>
 </div>
 </div></div>
 
-<div class="cta"><h2 style="margin:0">Need it fixed today?</h2><p style="color:#CBD5E1">Message us now - we reply in ~30 mins</p><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp Us</a><p style="font-size:12px;color:#94A3B8;margin-top:20px">© 2026 HomeFix UK • Leeds LS1-LS28 • Made in Leeds</p></div>
+<div class="cta"><h2 style="margin:0">Need it fixed today?</h2><p style="color:#CBD5E1">Message us now - we reply in ~30 mins</p><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp Us</a><p style="font-size:12px;color:#94A3B8;margin-top:20px">© 2026 HomeFix UK • Leeds LS1-LS28 • Made in Leeds<br>Photos are illustrative. Names shown are roles only, not real people.</p></div>
 <script>
 function go(){var j=document.getElementById('job').value;var msg=j?"Hi HomeFix UK, I need help with: "+j:"Hi HomeFix UK, I need a fixer";window.open("https://wa.me/447923825068?text="+encodeURIComponent(msg),"_blank");}
 </script>
