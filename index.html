@@ -31,8 +31,7 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 .how h2{font-size:36px;margin:0 0 40px}
 .steps{max-width:1000px;margin:auto;display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
 .step{flex:1;min-width:220px;max-width:300px}
-.circle{width:150px;height:150px;background:#0A2540;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;font-size:65px;position:relative;overflow:hidden}
-.circle span{position:relative;z-index:2}
+.circle{width:150px;height:150px;background:#0A2540;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;font-size:65px}
 .step small{color:#FF6B00;font-weight:bold;letter-spacing:1px}
 .step h3{font-size:19px;margin:15px 0 5px}
 .step p{color:#666;font-size:14px;margin:0}
@@ -49,6 +48,20 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 .phone-tag{position:absolute;top:20px;left:20px;background:#FF6B00;color:white;font-size:12px;font-weight:bold;padding:4px 8px;border-radius:4px;z-index:3}
 .card2{width:140px;height:200px;object-fit:cover;border-radius:12px;margin-top:100px}
 .card3{width:110px;height:160px;object-fit:cover;border-radius:12px;margin-top:150px}
+.ready{background:#F2F4F7;padding:60px 20px;text-align:center}
+.ready h2{font-size:36px;margin:0}
+.ask{max-width:1100px;margin:auto;padding:60px 20px;text-align:center}
+.ask h2{font-size:34px;margin:0}
+.ask p{color:#555}
+.cards{display:flex;gap:20px;flex-wrap:wrap;justify-content:center;margin-top:30px;text-align:left}
+.qcard{flex:1;min-width:260px;max-width:340px;border:1px solid #e0e0e0;border-radius:8px;overflow:hidden}
+.qcard-inner{padding:20px}
+.qcard small{color:#888;font-weight:bold}
+.qcard h3{font-size:20px;margin:5px 0}
+.qcard i{color:#888;font-size:13px}
+.qcard p{color:#444;font-size:15px;line-height:1.5}
+.qcard a{color:#0A2540;text-decoration:underline;font-weight:bold}
+.qfoot{background:#EEF1F5;padding:12px 20px;font-weight:bold}
 .cta{background:#0A2540;color:white;padding:30px;text-align:center}
 .btn1{background:white;color:black;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block}
 .btn2{background:#25D366;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-left:10px}
@@ -98,14 +111,11 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 <div class="why-inner">
 <div class="why-left">
 <h3>Get matched with available tradespeople</h3>
-<p>Post your job for free and receive responses from tradespeople eager to take it on.</p>
-<br>
+<p>Post your job for free and receive responses from tradespeople eager to take it on.</p><br>
 <h3>Choose who you want to connect with</h3>
-<p>Read customer reviews, view tradespeople profiles, and chat on WhatsApp before you decide. No pressure, no fees.</p>
-<br>
+<p>Read customer reviews, view tradespeople profiles, and chat on WhatsApp before you decide.</p><br>
 <h3>Get it done - fast & guaranteed</h3>
-<p>From a leaking tap to a full bathroom - we cover LS1 to LS28, same-day where possible.</p>
-<br>
+<p>From a leaking tap to a full bathroom - we cover LS1 to LS28, same-day where possible.</p><br>
 <a href="https://wa.me/447923825068" style="background:#0A2540;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block">See how it works</a>
 </div>
 <div class="why-right">
@@ -114,7 +124,26 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 <img class="card3" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80">
 </div>
 </div>
-<p style="font-size:12px;color:#888;margin-top:10px">Pictured: Aisha - Painter in Headingley &nbsp;|&nbsp; Tom - Plumber in Chapel Allerton &nbsp;|&nbsp; Priya - Electrician in Roundhay</p>
+<p style="font-size:12px;color:#888;margin-top:10px">Pictured: Aisha - Painter in Headingley | Tom - Plumber in Chapel Allerton | Priya - Electrician in Roundhay</p>
+</div>
+
+<div class="ready">
+<h2>Ready to hire with confidence?</h2>
+<br>
+<a href="https://wa.me/447923825068" style="background:#0A2540;color:white;padding:14px 30px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block">Post your job</a>
+</div>
+
+<div class="ask">
+<h2>Ask a tradesperson</h2>
+<p>See what others are asking our expert tradespeople. <a href="https://wa.me/447923825068" style="color:#0A2540">Browse all questions</a></p>
+<div class="cards">
+<div class="qcard"><div class="qcard-inner"><small>Plumbing</small><h3>Leaking tap in kitchen? →</h3><i>Fatima - Headingley - 07/11/2026 - 2.10 PM</i><p>I have a dripping tap in my kitchen in Headingley. Is it a washer or do I need a new tap? How much to fix?</p><a href="https://wa.me/447923825068">Read more</a></div><div class="qfoot">💬 6 answers</div></div>
+<div class="qcard"><div class="qcard-inner"><small>Electrical</small><h3>Fuse keeps tripping →</h3><i>James - Beeston - 07/11/2026 - 1.45 PM</i><p>Hi, every time I turn on the kettle the fuse trips. Only in the kitchen. What could be causing it?</p><a href="https://wa.me/447923825068">Read more</a></div><div class="qfoot">💬 4 answers</div></div>
+<div class="qcard"><div class="qcard-inner"><small>Painting & Decorating</small><h3>Paint over wallpaper? →</h3><i>Sophie - Roundhay - 07/11/2026 - 12.30 PM</i><p>Hello, I just bought a house in Roundhay and the bedroom has old wallpaper. Can I paint over it or strip it?</p><a href="https://wa.me/447923825068">Read more</a></div><div class="qfoot">💬 5 answers</div></div>
+</div>
+<br>
+<p><b>Need expert advice?</b></p>
+<a href="https://wa.me/447923825068" style="border:1px solid #0A2540;color:#0A2540;padding:12px 60px;border-radius:6px;font-weight:bold;text-decoration:none;display:inline-block;background:white">Ask a question</a>
 </div>
 
 <div class="cta"><h3>Need a fix today?</h3><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp</a><p style="font-size:12px;color:#aaa;margin-top:20px">© 2026 HomeFix UK | Leeds LS1-LS28</p></div>
