@@ -8,7 +8,7 @@ body{font-family:Arial,sans-serif;margin:0;background:#fff;color:#111}
 .topbar{background:#FFF3E8;text-align:center;padding:9px;font-size:13px}
 .topbar b{color:#FF6B00}
 header{max-width:1150px;margin:auto;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:23px;font-weight:900}
+.logo{font-size:23px;font-weight:900;cursor:pointer}
 .logo span{color:#FF6B00}
 header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-left:16px}
 .join{background:#0A2540;color:#fff!important;padding:10px 16px;border-radius:30px}
@@ -81,19 +81,29 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 .footer h2{font-size:22px;margin:35px 0 18px}
 .footer h2:first-child{margin-top:0}
 .flink-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
-.flink-grid a{color:#D6DEE8;text-decoration:none;font-size:14px}
+.flink-grid a{color:#D6DEE8;text-decoration:none;font-size:14px;cursor:pointer}
 .flink-grid a:hover{color:#FF6B00}
 .footer-note{border-top:1px solid #2A3F5A;margin-top:35px;padding-top:20px;text-align:center;color:#94A3B8;font-size:12px;line-height:1.6}
 .cta{background:#0A2540;color:#fff;padding:35px;text-align:center;border-radius:30px 30px 0 0}
 .btn1{background:#fff;color:#111;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block}
 .btn2{background:#25D366;color:#fff;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-left:10px}
-@media(max-width:700px){.hero-left h1{font-size:36px}.hero-right img{height:300px}.why-right img.main{height:300px}.flink-grid{grid-template-columns:repeat(2,1fr)}}
+#cityPage{display:none;max-width:800px;margin:auto;padding:30px 20px 60px}
+#cityPage h1{font-size:42px;line-height:1.1;margin:10px 0}
+#cityPage p.desc{color:#555;line-height:1.6;font-size:16px;max-width:600px}
+#cityPage label{font-weight:bold;display:block;margin:25px 0 10px}
+#cityPage select{width:100%;max-width:450px;padding:14px;border:1px solid #ccc;border-radius:8px;font-size:16px}
+#cityPage .cont{background:#0A2540;color:#fff;border:none;padding:14px 30px;border-radius:8px;font-weight:bold;font-size:16px;cursor:pointer;margin-top:18px}
+#cityPage .back{color:#0A2540;font-weight:bold;text-decoration:none;cursor:pointer}
+.city-how{background:#F6F7F9;padding:50px 20px;margin-top:40px;border-radius:20px;text-align:center}
+.city-how h2{font-size:32px}
+@media(max-width:700px){.hero-left h1{font-size:36px}.hero-right img{height:300px}.why-right img.main{height:300px}.flink-grid{grid-template-columns:repeat(2,1fr)}#cityPage h1{font-size:32px}}
 </style>
 </head>
 <body>
 <div class="topbar">Are you a <b>local fixer</b> looking for work in Leeds? <a href="https://wa.me/447923825068" style="color:#111;font-weight:bold">Join HomeFix free →</a></div>
-<header><div class="logo">🔧 HomeFix <span>UK</span></div><div><a href="https://wa.me/447923825068">Get a fixer</a><a href="tel:07923825068">07923 825068</a><a class="join" href="https://wa.me/447923825068">Join as a pro</a></div></header>
+<header><div class="logo" onclick="goHome()">🔧 HomeFix <span>UK</span></div><div><a href="https://wa.me/447923825068">Get a fixer</a><a href="tel:07923825068">07923 825068</a><a class="join" href="https://wa.me/447923825068">Join as a pro</a></div></header>
 
+<div id="homePage">
 <div class="hero"><div class="hero-inner">
 <div class="hero-left">
 <span class="badge">● LEEDS • LS1 - LS28 • SAME-DAY AVAILABLE</span>
@@ -165,70 +175,54 @@ header a{color:#111;text-decoration:none;font-weight:bold;font-size:14px;margin-
 <div class="scard"><img src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80" alt="Handyman tools"><div class="scard-inner"><h3>Everyday Handyman</h3><p>Shelves, flat-pack, doors that stick, pictures, small jobs nobody else wants. We do them all.</p></div><a class="sbtn" href="https://wa.me/447923825068">Get a Handyman →</a></div>
 </div>
 </div></div>
+</div>
+
+<div id="cityPage">
+<a class="back" onclick="goHome()">← Back to Home</a>
+<p style="color:#888;margin-top:20px">🏠 / <span id="cityCrumb">London</span></p>
+<h1>Find a fixer in<br><span id="cityTitle">London</span></h1>
+<p class="desc">Looking for a fixer in <span id="cityDesc">London</span>? With HomeFix UK, you can message us on WhatsApp and get matched with a checked local pro in and around your area. Get a clear upfront price - no obligation.</p>
+<label>Pick what you need:</label>
+<select id="cityService">
+<option value="">Select a service</option>
+<option>Plumber</option><option>Electrician</option><option>Handyman</option><option>Painter & Decorator</option><option>Builder</option><option>Carpenter</option><option>Plasterer</option><option>Tiler</option><option>Flooring Fitter</option><option>Bathroom Fitter</option><option>Kitchen Fitter</option><option>Gas Engineer</option><option>Roofer</option><option>Boiler Repair</option><option>Roof Repair</option><option>Window Fitter</option><option>Gutter Repair</option><option>Wardrobe Fitter</option><option>Fencer</option><option>Bricklayer</option><option>Fireplace Installer</option><option>Conservatory Repair</option><option>Landscaper</option>
+</select><br>
+<button class="cont" onclick="cityContinue()">Continue →</button>
+<div class="city-how">
+<h2>How it works in <span class="cityName2">London</span></h2>
+<div class="grid3">
+<div class="card"><div class="icon">💬</div><h3>Tell us the fix</h3><p>Send a photo on WhatsApp. 30 seconds.</p></div>
+<div class="card"><div class="icon">⚡</div><h3>We match you</h3><p>We find a local pro near you in <span class="cityName2">London</span>.</p></div>
+<div class="card"><div class="icon">🏠</div><h3>Job done</h3><p>Agree price & time. Pay when happy.</p></div>
+</div>
+</div>
+</div>
 
 <div class="footer"><div class="footer-inner">
 <h2>Find a fixer near you</h2>
 <div class="flink-grid">
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20London">London</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Manchester">Manchester</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Glasgow">Glasgow</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Bristol">Bristol</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Birmingham">Birmingham</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Nottingham">Nottingham</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Leeds">Leeds</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Liverpool">Liverpool</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Sheffield">Sheffield</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Edinburgh">Edinburgh</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Cardiff">Cardiff</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Leicester">Leicester</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Stockport">Stockport</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Newcastle">Newcastle Upon Tyne</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Milton%20Keynes">Milton Keynes</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Northampton">Northampton</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Norwich">Norwich</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Derby">Derby</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Reading">Reading</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Coventry">Coventry</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Stoke">Stoke On Trent</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Cambridge">Cambridge</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20fixer%20in%20Southampton">Southampton</a>
-<a href="https://wa.me/447923825068">More cities +</a>
+<a onclick="showCity('London')">London</a><a onclick="showCity('Manchester')">Manchester</a><a onclick="showCity('Glasgow')">Glasgow</a><a onclick="showCity('Bristol')">Bristol</a><a onclick="showCity('Birmingham')">Birmingham</a><a onclick="showCity('Nottingham')">Nottingham</a>
+<a onclick="showCity('Leeds')">Leeds</a><a onclick="showCity('Liverpool')">Liverpool</a><a onclick="showCity('Sheffield')">Sheffield</a><a onclick="showCity('Edinburgh')">Edinburgh</a><a onclick="showCity('Cardiff')">Cardiff</a><a onclick="showCity('Leicester')">Leicester</a>
+<a onclick="showCity('Stockport')">Stockport</a><a onclick="showCity('Newcastle Upon Tyne')">Newcastle Upon Tyne</a><a onclick="showCity('Milton Keynes')">Milton Keynes</a><a onclick="showCity('Northampton')">Northampton</a><a onclick="showCity('Norwich')">Norwich</a><a onclick="showCity('Derby')">Derby</a>
+<a onclick="showCity('Reading')">Reading</a><a onclick="showCity('Coventry')">Coventry</a><a onclick="showCity('Stoke On Trent')">Stoke On Trent</a><a onclick="showCity('Cambridge')">Cambridge</a><a onclick="showCity('Southampton')">Southampton</a><a onclick="showCity('Leeds')">More cities +</a>
 </div>
-
 <h2>What our pros can fix</h2>
 <div class="flink-grid">
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Handyman">Handymen</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Painter">Painters & Decorators</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Builder">Builders</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Gardener">Landscape Gardeners</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Carpenter">Carpenters</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Plasterer">Plasterers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Tiler">Tilers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Flooring%20Fitter">Flooring Fitters</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Fencer">Fencers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Bricklayer">Bricklayers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Bathroom%20Fitter">Bathroom Fitters</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Window%20Fitter">Window Fitters</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Kitchen%20Fitter">Kitchen Fitters</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Gas%20Engineer">Gas Engineers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Roofer">Roofers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Fireplace%20Installer">Fireplace Installers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Plumber">Plumbers</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20an%20Electrician">Electricians</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Boiler%20Repair">Boiler Repair</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Conservatory%20Repair">Conservatory Repair</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Roof%20Repair">Roof Repair</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Wardrobe%20Fitter">Wardrobe Fitters</a>
-<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Gutter%20Repair">Gutter Repair</a>
-<a href="https://wa.me/447923825068">More fixes +</a>
+<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Handyman">Handymen</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Painter">Painters & Decorators</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Builder">Builders</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Gardener">Landscape Gardeners</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Carpenter">Carpenters</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Plasterer">Plasterers</a>
+<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Tiler">Tilers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Flooring%20Fitter">Flooring Fitters</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Fencer">Fencers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Bricklayer">Bricklayers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Bathroom%20Fitter">Bathroom Fitters</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Window%20Fitter">Window Fitters</a>
+<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Kitchen%20Fitter">Kitchen Fitters</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Gas%20Engineer">Gas Engineers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Roofer">Roofers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Fireplace%20Installer">Fireplace Installers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Plumber">Plumbers</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20an%20Electrician">Electricians</a>
+<a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Boiler%20Repair">Boiler Repair</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Conservatory%20Repair">Conservatory Repair</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Roof%20Repair">Roof Repair</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20a%20Wardrobe%20Fitter">Wardrobe Fitters</a><a href="https://wa.me/447923825068?text=Hi%20HomeFix%2C%20I%20need%20Gutter%20Repair">Gutter Repair</a><a href="https://wa.me/447923825068">More fixes +</a>
 </div>
-
 <div class="footer-note">© 2026 HomeFix UK • Leeds LS1-LS28 • Made in Leeds<br>Photos are illustrative. Names shown are roles only, not real people.</div>
 </div></div>
 
 <div class="cta"><h2 style="margin:0">Need it fixed today?</h2><p style="color:#CBD5E1">Message us now - we reply in ~30 mins</p><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp Us</a></div>
 <script>
+var currentCity="London";
 function go(){var j=document.getElementById('job').value;var msg=j?"Hi HomeFix UK, I need help with: "+j:"Hi HomeFix UK, I need a fixer";window.open("https://wa.me/447923825068?text="+encodeURIComponent(msg),"_blank");}
+function showCity(city){currentCity=city;document.getElementById('homePage').style.display='none';document.getElementById('cityPage').style.display='block';document.getElementById('cityTitle').innerText=city;document.getElementById('cityCrumb').innerText=city;document.getElementById('cityDesc').innerText=city;document.querySelectorAll('.cityName2').forEach(function(e){e.innerText=city});document.getElementById('cityService').value='';window.scrollTo(0,0);document.title="HomeFix UK - Fixer in "+city;}
+function goHome(){document.getElementById('cityPage').style.display='none';document.getElementById('homePage').style.display='block';window.scrollTo(0,0);document.title="HomeFix UK - Local Fixers in Leeds & UK";}
+function cityContinue(){var s=document.getElementById('cityService').value;if(!s){alert("Please pick a service first");return;}var msg="Hi HomeFix UK, I need a "+s+" in "+currentCity;window.open("https://wa.me/447923825068?text="+encodeURIComponent(msg),"_blank");}
 </script>
 </body>
 </html>
