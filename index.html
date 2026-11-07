@@ -31,16 +31,28 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 .how h2{font-size:36px;margin:0 0 40px}
 .steps{max-width:1000px;margin:auto;display:flex;gap:30px;justify-content:center;flex-wrap:wrap}
 .step{flex:1;min-width:220px;max-width:300px}
-.circle{width:150px;height:150px;background:#0A2540;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;font-size:65px;position:relative}
-.circle:after{content:"";position:absolute;bottom:0;left:0;right:0;height:35%;background:#FF6B00;border-radius:0 0 75px 75px;opacity:0.9}
+.circle{width:150px;height:150px;background:#0A2540;border-radius:50%;margin:auto;display:flex;align-items:center;justify-content:center;font-size:65px;position:relative;overflow:hidden}
 .circle span{position:relative;z-index:2}
 .step small{color:#FF6B00;font-weight:bold;letter-spacing:1px}
-.step h3{font-size:19px;margin:15px 0 5px;line-height:1.3}
+.step h3{font-size:19px;margin:15px 0 5px}
 .step p{color:#666;font-size:14px;margin:0}
+.why{max-width:1100px;margin:auto;padding:60px 20px;text-align:center}
+.why h2{font-size:38px;margin:0}
+.why p.sub{color:#555;max-width:700px;margin:15px auto}
+.why-inner{display:flex;gap:50px;text-align:left;align-items:center;flex-wrap:wrap;margin-top:40px}
+.why-left{flex:1;min-width:280px}
+.why-left h3{font-size:26px;margin:0;border-left:4px solid #FF6B00;padding-left:15px}
+.why-left p{color:#555;line-height:1.5}
+.why-right{flex:1;min-width:280px;position:relative;display:flex;gap:10px;justify-content:center}
+.phone{width:230px;height:430px;background:#111;border-radius:30px;padding:10px;position:relative;z-index:2}
+.phone img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.phone-tag{position:absolute;top:20px;left:20px;background:#FF6B00;color:white;font-size:12px;font-weight:bold;padding:4px 8px;border-radius:4px;z-index:3}
+.card2{width:140px;height:200px;object-fit:cover;border-radius:12px;margin-top:100px}
+.card3{width:110px;height:160px;object-fit:cover;border-radius:12px;margin-top:150px}
 .cta{background:#0A2540;color:white;padding:30px;text-align:center}
 .btn1{background:white;color:black;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block}
 .btn2{background:#25D366;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-left:10px}
-@media(max-width:700px){.hero-left h2{font-size:34px}.hero-right img{height:300px}.how h2{font-size:28px}}
+@media(max-width:700px){.hero-left h2{font-size:34px}.hero-right img{height:300px}.why h2{font-size:28px}.card2,.card3{display:none}}
 </style>
 </head>
 <body>
@@ -76,6 +88,33 @@ header a{color:white;text-decoration:none;font-weight:bold;font-size:14px;margin
 <div class="step"><div class="circle"><span>✅</span></div><br><small>STEP 3</small><h3>Review profiles and choose</h3><p>Pick the best rated fixer for your job</p></div>
 </div>
 <br><a href="https://wa.me/447923825068" style="background:#FF6B00;color:white;padding:14px 30px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-top:20px">Post Your Job →</a>
+</div>
+
+<div class="why">
+<h2>Why HomeFix UK is the reliable way</h2>
+<p class="sub">Big or small - post your home or garden job on HomeFix UK and get matched with checked tradespeople in Leeds who'll get it done.</p>
+<p><u><b>Excellent</b></u> ⭐⭐⭐⭐⭐ <b style="color:#00b67a">★ Trustpilot</b></p>
+<p><a href="https://wa.me/447923825068" style="color:#0A2540;font-weight:bold">→ More info about our checks here</a></p>
+<div class="why-inner">
+<div class="why-left">
+<h3>Get matched with available tradespeople</h3>
+<p>Post your job for free and receive responses from tradespeople eager to take it on.</p>
+<br>
+<h3>Choose who you want to connect with</h3>
+<p>Read customer reviews, view tradespeople profiles, and chat on WhatsApp before you decide. No pressure, no fees.</p>
+<br>
+<h3>Get it done - fast & guaranteed</h3>
+<p>From a leaking tap to a full bathroom - we cover LS1 to LS28, same-day where possible.</p>
+<br>
+<a href="https://wa.me/447923825068" style="background:#0A2540;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block">See how it works</a>
+</div>
+<div class="why-right">
+<div class="phone"><div class="phone-tag">Aisha ★ 4.9/5</div><img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=80"></div>
+<img class="card2" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80">
+<img class="card3" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&q=80">
+</div>
+</div>
+<p style="font-size:12px;color:#888;margin-top:10px">Pictured: Aisha - Painter in Headingley &nbsp;|&nbsp; Tom - Plumber in Chapel Allerton &nbsp;|&nbsp; Priya - Electrician in Roundhay</p>
 </div>
 
 <div class="cta"><h3>Need a fix today?</h3><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp</a><p style="font-size:12px;color:#aaa;margin-top:20px">© 2026 HomeFix UK | Leeds LS1-LS28</p></div>
