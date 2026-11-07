@@ -1,47 +1,36 @@
-"use client";
-import { useState } from "react";
-export default function Home() {
-  const [job, setJob] = useState("");
-  const phone = "07923825068";
-  const phoneDisplay = "07923 825068";
-  const handleSearch = () => {
-    const msg = job ? Hi HomeFix UK, I need help with: ${job} : Hi HomeFix UK, I need a handyman;
-    window.open(https://wa.me/447923825068?text=${encodeURIComponent(msg)}, "_blank");
-  };
-  return (
-    <main style={{fontFamily:"sans-serif"}}>
-      <header style={{background:"#2B0A3A",color:"white",padding:"20px",display:"flex",justifyContent:"space-between"}}>
-        <h1>🔧 HomeFix UK</h1>
-        <a href={tel:${phone}} style={{color:"white",fontWeight:"bold"}}>{phoneDisplay}</a>
-      </header>
-      <section style={{background:"#2B0A3A",color:"white",padding:"40px 20px",textAlign:"center"}}>
-        <h2 style={{fontSize:"36px",fontWeight:"900"}}>The reliable way
-to fix your home</h2>
-        <h3 style={{marginTop:"20px"}}>What is your job?</h3>
-        <div style={{display:"flex",maxWidth:"400px",margin:"10px auto",background:"white",padding:"5px",borderRadius:"8px"}}>
-          <input value={job} onChange={(e)=>setJob(e.target.value)} placeholder="For example: painting" style={{flex:1,padding:"10px",border:"none",outline:"none"}} />
-          <button onClick={handleSearch} style={{background:"#5B2A86",color:"white",padding:"0 20px",border:"none",borderRadius:"6px",fontSize:"20px"}}>→</button>
-        </div>
-        <p>Type your job → it opens WhatsApp to us instantly</p>
-      </section>
-      <section style={{padding:"30px 20px",textAlign:"center"}}>
-        <p>⭐⭐⭐⭐⭐ Excellent on Trustpilot</p>
-        <div style={{display:"flex",justifyContent:"center",gap:"30px",marginTop:"20px"}}>
-          <div>5,000+
-jobs done</div>
-          <div>40+
-categories</div>
-          <div>2,500+
-reviews</div>
-        </div>
-      </section>
-      <section style={{background:"#2B0A3A",color:"white",padding:"30px",textAlign:"center"}}>
-        <h3>Need a fix today?</h3>
-
-        <a href={tel:${phone}} style={{background:"white",color:"black",padding:"12px 25px",borderRadius:"30px",fontWeight:"bold",textDecoration:"none"}}>📞 {phoneDisplay}</a>
-        <a href="https://wa.me/447923825068" target="_blank" style={{background:"#25D366",color:"white",padding:"12px 25px",borderRadius:"30px",fontWeight:"bold",textDecoration:"none",marginLeft:"10px"}}>WhatsApp</a>
-        <p style={{fontSize:"12px",marginTop:"20px",color:"#aaa"}}>© 2026 HomeFix UK | Leeds</p>
-      </section>
-    </main>
-  );
-}
+<!DOCTYPE html>
+<html>
+<head>
+<title>HomeFix UK - Leeds</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body{font-family:Arial,sans-serif;margin:0}
+header{background:#2B0A3A;color:white;padding:20px;display:flex;justify-content:space-between}
+header a{color:white;font-weight:bold;text-decoration:none}
+.hero{background:#2B0A3A;color:white;padding:40px 20px;text-align:center}
+.hero h2{font-size:36px}
+.search{max-width:400px;margin:15px auto;background:white;padding:5px;border-radius:8px;display:flex}
+.search input{flex:1;padding:12px;border:none;outline:none}
+.search button{background:#5B2A86;color:white;border:none;padding:0 20px;border-radius:6px;font-size:20px}
+.stats{padding:30px 20px;text-align:center}
+.stats div{display:inline-block;margin:0 20px}
+.cta{background:#2B0A3A;color:white;padding:30px;text-align:center}
+.btn1{background:white;color:black;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block}
+.btn2{background:#25D366;color:white;padding:12px 25px;border-radius:30px;font-weight:bold;text-decoration:none;display:inline-block;margin-left:10px}
+</style>
+</head>
+<body>
+<header><b>🔧 HomeFix UK</b><a href="tel:07923825068">07923 825068</a></header>
+<div class="hero">
+<h2>The reliable way<br>to fix your home</h2>
+<h3>What is your job?</h3>
+<div class="search"><input id="job" placeholder="For example: painting"><button onclick="go()">→</button></div>
+<p>Type your job → it opens WhatsApp to us instantly</p>
+</div>
+<div class="stats"><p>⭐⭐⭐⭐⭐ Excellent on Trustpilot</p><div><b>5,000+</b><br>jobs done</div><div><b>40+</b><br>categories</div><div><b>2,500+</b><br>reviews</div></div>
+<div class="cta"><h3>Need a fix today?</h3><a class="btn1" href="tel:07923825068">📞 07923 825068</a><a class="btn2" href="https://wa.me/447923825068">WhatsApp</a><p style="font-size:12px;color:#aaa;margin-top:20px">© 2026 HomeFix UK | Leeds</p></div>
+<script>
+function go(){var j=document.getElementById('job').value;var msg=j?"Hi HomeFix UK, I need help with: "+j:"Hi HomeFix UK, I need a handyman";window.open("https://wa.me/447923825068?text="+encodeURIComponent(msg),"_blank");}
+</script>
+</body>
+</html>
